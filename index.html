@@ -36,14 +36,13 @@
     }
 
     .visual {
+      position: relative;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
     }
 
     .brand-image {
-      display: block;
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -102,3 +101,90 @@
 
     footer a {
       color: #777777;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 650px) {
+      .site {
+        width: calc(100% - 30px);
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 0;
+      }
+
+      .visual {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+
+      .brand-image {
+        position: static;
+        width: 210px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .content {
+        width: 100%;
+        text-align: center;
+      }
+
+      nav {
+        align-items: center;
+      }
+
+      footer {
+        margin-top: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="site">
+
+    <section class="visual">
+      <img
+        class="brand-image"
+        src="https://raw.githubusercontent.com/maochunweitw/maochunweitw.github.io/main/assets/image/image.jpg"
+        alt="淳映 CHUN Films">
+    </section>
+
+    <section class="content">
+
+      <h1 class="brand-name">淳映</h1>
+
+      <p class="brand-en">CHUN Films</p>
+
+      <p class="slogan">用不同的媒介詮釋世界。</p>
+
+      <nav aria-label="主要導覽">
+        <a href="/">首頁 Home</a>
+        <a href="/blog/">最新 Latest</a>
+        <a href="/about/">關於 About</a>
+        <a href="https://vimeo.com/user146729676">作品 Vimeo</a>
+        <a href="https://www.tiktok.com/@maochun724">抖音 TikTok</a>
+        <a href="https://www.youtube.com/@淳映CHUNFilms">頻道 Channel</a>
+        <a href="https://maochunweitw.github.io/">淳文字 ChunWenzi</a>
+        <a href="https://g0v.social/@imChun">嘟 Mastodon</a>
+        <a href="https://www.threads.com/@maochunwei">脆 Threads</a>
+      </nav>
+
+      <footer>
+        Powered by
+        <a href="https://pages.github.com/">GitHub Pages</a>
+      </footer>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
