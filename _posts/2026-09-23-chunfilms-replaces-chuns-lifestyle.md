@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 「淳映｜CHUN Films」取代過去經營不佳的「淳粹生活。Chun's Lifestyle」
-date: 2026-09-23
+date: 2026-09-23 19:30 +0800
 tag:
  - 公告
 ---
