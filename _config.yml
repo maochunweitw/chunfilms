@@ -1,0 +1,5 @@
+title: 淳映 CHUN Films
+baseurl: /chunfilms
+url: https://maochunweitw.github.io
+
+permalink: /blog/:year/:month/:day/:title.html
