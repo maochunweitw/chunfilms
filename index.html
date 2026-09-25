@@ -40,13 +40,27 @@
       height: 100%;
     }
 
-    .brand-image {
+    .latest-work {
+      margin: 0 0 18px;
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      line-height: 1.7;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .video iframe {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: top;
+      border: 0;
     }
 
     .content {
@@ -123,16 +137,35 @@
         height: auto;
       }
 
-      .brand-image {
-        position: static;
-        width: 210px;
-        height: auto;
-        object-fit: contain;
+      .latest-work {
+        font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
+                     "PMingLiU", "MingLiU", serif;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 16px;
+      }
+
+      .video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
       }
 
       .content {
         width: 100%;
         text-align: center;
+        font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
+                     "PMingLiU", "MingLiU", serif;
+      }
+
+      .brand-name,
+      .brand-en,
+      .slogan,
+      nav,
+      nav a,
+      footer,
+      footer a {
+        font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
+                     "PMingLiU", "MingLiU", serif;
       }
 
       nav {
@@ -151,10 +184,19 @@
   <main class="site">
 
     <section class="visual">
-      <img
-        class="brand-image"
-        src="https://raw.githubusercontent.com/maochunweitw/maochunweitw.github.io/main/assets/image/image.jpg"
-        alt="淳映 CHUN Films">
+
+      <h2 class="latest-work">最新作品｜Latest Work</h2>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/xCB4Pt-SxiE"
+          title="最新作品｜Latest Work"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
     </section>
 
     <section class="content">
