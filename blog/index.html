@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -58,45 +62,40 @@
       color: #c00000;
     }
 
-    article {
-      margin-top: 40px;
+    .post-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .date {
-      margin: 0 0 18px;
+    .post-item {
+      padding: 0 0 32px;
+      margin: 0 0 32px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .post-date {
+      margin: 0 0 12px;
       font-size: 14px;
       color: #777777;
       letter-spacing: 0.04em;
     }
 
-    h2 {
-      margin: 0 0 28px;
-      font-size: 25px;
+    .post-title {
+      margin: 0;
+      font-size: 22px;
       font-weight: normal;
       line-height: 1.6;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
 
-    .source {
-      margin: 0 0 35px;
-      font-size: 14px;
-      line-height: 1.9;
-      color: #666666;
+    .post-title a {
+      color: #222222;
+      text-decoration: none;
     }
 
-    .source a {
-      color: #666666;
-    }
-
-    article p {
-      margin: 0 0 22px;
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 0.04em;
-    }
-
-    .closing {
-      margin-top: 32px;
+    .post-title a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -132,13 +131,8 @@
         margin-bottom: 42px;
       }
 
-      h2 {
-        font-size: 22px;
-      }
-
-      article p {
-        font-size: 15px;
-        line-height: 1.9;
+      .post-title {
+        font-size: 19px;
       }
     }
   </style>
@@ -149,51 +143,30 @@
   <main class="page">
 
     <div class="back">
-      <a href="/chunfilms/">← 首頁 Home</a>
+      <a href="{{ site.baseurl }}/">← 首頁 Home</a>
     </div>
 
     <h1>最新</h1>
 
     <p class="brand-en">Latest</p>
 
-    <article>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li class="post-item">
 
-      <p class="date">23 Sep, 2026</p>
+          <p class="post-date">
+            {{ post.date | date: "%d %b, %Y" }}
+          </p>
 
-      <h2>「淳映｜CHUN Films」取代過去經營不佳的「淳粹生活。Chun's Lifestyle」</h2>
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+          </h2>
 
-      <p class="source">
-        原文出處：
-        <a href="https://maochunweitw.github.io/%E5%85%AC%E5%91%8A/2026/09/23/ac.html">
-          淳文字
-        </a>
-      </p>
-
-      <p>
-        這次遷站，也是一次個人文創品牌重新整合的契機。繼「淳文字」這裡陸續安置到位後，接著我把目光放在那個幾乎已經形同停更的YouTube Channel「淳粹生活。Chun’s Lifestyle」上。
-      </p>
-
-      <p>
-        「淳映｜CHUN Films」的誕生，是自己和AI共同研究，反覆討論後最終定案的品牌。它除了是以lomo風格為主的創作載體之外，更融合風景、感受等人文元素，產出的作品將會和過往的影片有著極大的差別，可以說是一次自我攝影創作的升級版，直接取代那個三魂七魄始終兜不到一塊兒的「淳粹生活。Chun’s Lifestyle」。
-      </p>
-
-      <p>
-        所以，以後我們判斷一支影片能不能成為「淳映」作品，可以很簡單：LOMO 有沒有？ SCENERY 有沒有？ FEELING 有沒有？
-      </p>
-
-      <p>
-        三者可以有不同程度，但不能離開這個核心。這也代表未來就算題材變化很大——台北、旅行、街景、山、海、人物、日常、夜景——都沒關係。只要始終從：LOMO → SCENERY → FEELING 這個視角出發，它就是淳映。
-      </p>
-
-      <p>
-        而我覺得這才是我們今天真正找到的東西。「淳映」不是一個 YouTube 頻道名稱。它是一種觀看世界的方法。
-      </p>
-
-      <p class="closing">
-        新頻道預計在2026年10月1日正式推出，歡迎舊雨新知。
-      </p>
-
-    </article>
+        </li>
+      {% endfor %}
+    </ul>
 
     <footer>
       Powered by
