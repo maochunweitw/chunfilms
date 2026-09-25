@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淳映 CHUN Films</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
+                   "PMingLiU", "MingLiU", serif;
+      min-height: 100vh;
+    }
+
+    .site {
+      width: min(760px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 70px 0 45px;
+    }
+
+    .brand {
+      text-align: center;
+    }
+
+    .brand-image {
+      display: block;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin: 0 auto 28px;
+    }
+
+    .brand-name {
+      margin: 0;
+      font-size: 38px;
+      font-weight: normal;
+      letter-spacing: 0.12em;
+    }
+
+    .brand-en {
+      margin: 8px 0 0;
+      font-size: 20px;
+      letter-spacing: 0.16em;
+      font-weight: normal;
+    }
+
+    .slogan {
+      margin: 28px 0 55px;
+      font-size: 17px;
+      letter-spacing: 0.08em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      line-height: 1.8;
+    }
+
+    nav a {
+      color: #222222;
+      text-decoration: none;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 75px;
+      text-align: center;
+      font-size: 13px;
+      color: #777777;
+    }
+
+    footer a {
+      color: #777777;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .site {
+        width: calc(100% - 30px);
+        padding-top: 50px;
+      }
+
+      .brand-image {
+        width: 105px;
+        height: 105px;
+      }
+
+      .brand-name {
+        font-size: 32px;
+      }
+
+      .brand-en {
+        font-size: 18px;
+      }
+
+      .slogan {
+        font-size: 15px;
+        margin-bottom: 42px;
+      }
+
+      nav {
+        gap: 8px 16px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      footer {
+        margin-top: 55px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="site">
+
+    <header class="brand">
+
+      <img
+        class="brand-image"
+        src="https://raw.githubusercontent.com/maochunweitw/maochunweitw.github.io/main/assets/image/image.jpg"
+        alt="淳映 CHUN Films">
+
+      <h1 class="brand-name">淳映</h1>
+
+      <p class="brand-en">CHUN Films</p>
+
+      <p class="slogan">用不同的媒介詮釋世界。</p>
+
+    </header>
+
+    <nav aria-label="主要導覽">
+      <a href="https://chunfilms.github.io/">首頁 Home</a>
+      <a href="/blog/">最新 Latest</a>
+      <a href="/about/">關於 About</a>
+      <a href="https://vimeo.com/user146729676">作品 Vimeo</a>
+      <a href="https://www.tiktok.com/@maochun724">抖音 TikTok</a>
+      <a href="https://www.youtube.com/@淳映CHUNFilms">頻道 Channel</a>
+      <a href="https://maochunweitw.github.io/">淳文字 ChunWenzi</a>
+      <a href="https://g0v.social/@imChun">嘟 Mastodon</a>
+      <a href="https://www.threads.com/@maochunwei">脆 Threads</a>
+    </nav>
+
+    <footer>
+      Powered by
+      <a href="https://pages.github.com/">GitHub Pages</a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
