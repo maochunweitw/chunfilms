@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}｜淳映 CHUN Films</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222222;
+      font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
+                   "PMingLiU", "MingLiU", serif;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(760px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 60px 0 70px;
+    }
+
+    .back {
+      margin-bottom: 55px;
+      font-size: 15px;
+    }
+
+    .back a {
+      color: #222222;
+      text-decoration: none;
+    }
+
+    .back a:hover {
+      text-decoration: underline;
+    }
+
+    .date {
+      margin: 0 0 18px;
+      font-size: 14px;
+      color: #777777;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 0 0 32px;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 1.6;
+      letter-spacing: 0.06em;
+    }
+
+    .content p {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: 0.04em;
+    }
+
+    .content a {
+      color: #222222;
+    }
+
+    footer {
+      margin-top: 65px;
+      font-size: 13px;
+      color: #777777;
+    }
+
+    footer a {
+      color: #777777;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 650px) {
+      .page {
+        width: calc(100% - 30px);
+        padding: 45px 0 55px;
+      }
+
+      .back {
+        margin-bottom: 45px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.9;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="back">
+      <a href="{{ site.baseurl }}/blog/">← 最新 Latest</a>
+    </div>
+
+    <p class="date">{{ page.date | date: "%d %b, %Y" }}</p>
+
+    <h1>{{ page.title }}</h1>
+
+    <div class="content">
+      {{ content }}
+    </div>
+
+    <footer>
+      Powered by
+      <a href="https://pages.github.com/">GitHub Pages</a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
