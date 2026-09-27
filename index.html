@@ -1,326 +1,36 @@
-```html
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>最新作品｜Latest Work</h2>
 
-  <title>淳映 CHUN Films</title>
+<p>
+  <a href="https://www.youtube.com/embed/xCB4Pt-SxiE">
+    最新作品｜Latest Work
+  </a>
+</p>
 
-  <!-- 思源宋體／Noto Serif TC -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500&display=swap"
-    rel="stylesheet"
-  >
+<h3>深入瞭解</h3>
 
-  <!-- Google AdSense -->
-  <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625815301042397"
-    crossorigin="anonymous">
-  </script>
+<p>自我成長與勵志</p>
+<p>影片分享</p>
+<p>網誌資源與服務</p>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<h1>淳映</h1>
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-    }
+<p>CHUN Films</p>
 
-    html,
-    body,
-    body * {
-      font-family: "Noto Serif TC", serif;
-    }
+<p>用不同的媒介詮釋世界。</p>
 
-    body {
-      background: #ffffff;
-      color: #222222;
-      min-height: 100vh;
-    }
+<nav>
+  <a href="https://maochunweitw.github.io/chunfilms/">首頁 Home</a>
+  <a href="https://maochunweitw.github.io/chunfilms/blog/">最新 Latest</a>
+  <a href="https://maochunweitw.github.io/chunfilms/about.html">關於 About</a>
+  <a href="https://vimeo.com/user146729676">作品 Vimeo</a>
+  <a href="https://www.tiktok.com/@maochun724">抖音 TikTok</a>
+  <a href="https://www.youtube.com/@%E6%B7%B3%E6%98%A0CHUNFilms">頻道 Channel</a>
+  <a href="https://maochunweitw.github.io/">淳文字 ChunWenzi</a>
+  <a href="https://g0v.social/@imChun">嘟 Mastodon</a>
+  <a href="https://www.threads.com/@maochunwei">脆 Threads</a>
+</nav>
 
-    .site {
-      width: min(760px, calc(100% - 40px));
-      min-height: 100vh;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      gap: 70px;
-      padding: 50px 0;
-    }
-
-    .visual {
-      position: relative;
-      height: 100%;
-    }
-
-    .latest-work {
-      margin: 0 0 18px;
-      font-size: 16px;
-      font-weight: normal;
-      letter-spacing: 0.08em;
-      line-height: 1.7;
-    }
-
-    .video {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-    }
-
-    .video iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* 廣告區 */
-    .ad-area {
-      width: 100%;
-      margin-top: 24px;
-    }
-
-    .content {
-      text-align: left;
-    }
-
-    .brand-name {
-      margin: 0;
-      font-size: 38px;
-      font-weight: normal;
-      letter-spacing: 0.12em;
-    }
-
-    .brand-en {
-      margin: 8px 0 0;
-      font-size: 20px;
-      letter-spacing: 0.16em;
-      font-weight: normal;
-      color: #c00000;
-    }
-
-    .slogan {
-      margin: 28px 0 48px;
-      font-size: 17px;
-      letter-spacing: 0.08em;
-      line-height: 1.8;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 9px;
-      line-height: 1.7;
-    }
-
-    nav a {
-      color: #222222;
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 55px;
-      font-size: 13px;
-      color: #777777;
-    }
-
-    footer a {
-      color: #777777;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 650px) {
-
-      html,
-      body,
-      body * {
-        font-family: "Noto Serif TC", serif;
-      }
-
-      .site {
-        width: calc(100% - 30px);
-        min-height: auto;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 50px 0;
-      }
-
-      .visual {
-        position: static;
-        width: 100%;
-        height: auto;
-      }
-
-      .latest-work {
-        margin: 0 0 16px;
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 1.7;
-      }
-
-      .video {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-      }
-
-      .ad-area {
-        width: 100%;
-        margin-top: 24px;
-      }
-
-      .content {
-        width: 100%;
-        text-align: center;
-      }
-
-      .brand-name {
-        font-size: 38px;
-      }
-
-      .brand-en {
-        font-size: 20px;
-      }
-
-      .slogan {
-        font-size: 17px;
-      }
-
-      nav {
-        align-items: center;
-      }
-
-      nav a {
-        font-size: 15px;
-      }
-
-      footer {
-        margin-top: 45px;
-        font-size: 13px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <main class="site">
-
-    <section class="visual">
-
-      <h2 class="latest-work">最新作品｜Latest Work</h2>
-
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/xCB4Pt-SxiE"
-          title="最新作品｜Latest Work"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <!-- AdSense 廣告 -->
-      <div class="ad-area">
-        <ins
-          class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-3625815301042397"
-          data-ad-slot="4652625757"
-          data-ad-format="auto"
-          data-full-width-responsive="true">
-        </ins>
-
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-
-    </section>
-
-    <section class="content">
-
-      <h1 class="brand-name">淳映</h1>
-
-      <p class="brand-en">CHUN Films</p>
-
-      <p class="slogan">用不同的媒介詮釋世界。</p>
-
-      <nav aria-label="主要導覽">
-        <a href="/chunfilms/">首頁 Home</a>
-        <a href="/chunfilms/blog/">最新 Latest</a>
-        <a href="/chunfilms/about.html">關於 About</a>
-
-        <a
-          href="https://vimeo.com/user146729676"
-          target="_blank"
-          rel="noopener noreferrer">
-          作品 Vimeo
-        </a>
-
-        <a
-          href="https://www.tiktok.com/@maochun724"
-          target="_blank"
-          rel="noopener noreferrer">
-          抖音 TikTok
-        </a>
-
-        <a
-          href="https://www.youtube.com/@淳映CHUNFilms"
-          target="_blank"
-          rel="noopener noreferrer">
-          頻道 Channel
-        </a>
-
-        <a
-          href="https://maochunweitw.github.io/"
-          target="_blank"
-          rel="noopener noreferrer">
-          淳文字 ChunWenzi
-        </a>
-
-        <a
-          href="https://g0v.social/@imChun"
-          target="_blank"
-          rel="noopener noreferrer">
-          嘟 Mastodon
-        </a>
-
-        <a
-          href="https://www.threads.com/@maochunwei"
-          target="_blank"
-          rel="noopener noreferrer">
-          脆 Threads
-        </a>
-      </nav>
-
-      <footer>
-        Powered by
-        <a href="https://pages.github.com/">GitHub Pages</a>
-      </footer>
-
-    </section>
-
-  </main>
-
-</body>
-</html>
-```
+<p>
+  Powered by
+  <a href="https://pages.github.com/">GitHub Pages</a>
+</p>
