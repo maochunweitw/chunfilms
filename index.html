@@ -1,19 +1,24 @@
----
-layout: none
----
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>淳映 CHUN Films</title>
+
   <!-- 思源宋體／Noto Serif TC -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
 
-  <title>最新 Latest｜淳映 CHUN Films</title>
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3625815301042397"
+    crossorigin="anonymous">
+  </script>
 
   <style>
     * {
@@ -26,35 +31,68 @@ layout: none
       padding: 0;
     }
 
+    html,
+    body,
+    body * {
+      font-family: "Noto Serif TC", serif;
+    }
+
     body {
       background: #ffffff;
       color: #222222;
-      font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
-                   "PMingLiU", "MingLiU", serif;
       min-height: 100vh;
     }
 
-    .page {
+    .site {
       width: min(760px, calc(100% - 40px));
+      min-height: 100vh;
       margin: 0 auto;
-      padding: 60px 0 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      gap: 70px;
+      padding: 50px 0;
     }
 
-    .back {
-      margin-bottom: 55px;
-      font-size: 15px;
+    .visual {
+      position: relative;
+      height: 100%;
     }
 
-    .back a {
-      color: #222222;
-      text-decoration: none;
+    .latest-work {
+      margin: 0 0 18px;
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      line-height: 1.7;
     }
 
-    .back a:hover {
-      text-decoration: underline;
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
     }
 
-    h1 {
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* 廣告區 */
+    .ad-area {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .brand-name {
       margin: 0;
       font-size: 38px;
       font-weight: normal;
@@ -62,50 +100,40 @@ layout: none
     }
 
     .brand-en {
-      margin: 8px 0 50px;
+      margin: 8px 0 0;
       font-size: 20px;
       letter-spacing: 0.16em;
+      font-weight: normal;
       color: #c00000;
     }
 
-    .post-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .slogan {
+      margin: 28px 0 48px;
+      font-size: 17px;
+      letter-spacing: 0.08em;
+      line-height: 1.8;
     }
 
-    .post-item {
-      padding: 0 0 32px;
-      margin: 0 0 32px;
-      border-bottom: 1px solid #dddddd;
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 9px;
+      line-height: 1.7;
     }
 
-    .post-date {
-      margin: 0 0 12px;
-      font-size: 14px;
-      color: #777777;
-      letter-spacing: 0.04em;
-    }
-
-    .post-title {
-      margin: 0;
-      font-size: 22px;
-      font-weight: normal;
-      line-height: 1.6;
-      letter-spacing: 0.05em;
-    }
-
-    .post-title a {
+    nav a {
       color: #222222;
       text-decoration: none;
+      font-size: 15px;
     }
 
-    .post-title a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
 
     footer {
-      margin-top: 65px;
+      margin-top: 55px;
       font-size: 13px;
       color: #777777;
     }
@@ -120,31 +148,72 @@ layout: none
     }
 
     @media (max-width: 650px) {
-      /* 手機版：全站強制宋體 */
-      html, body, body *:not(code):not(pre) {
-        font-family: "Noto Serif TC", "Noto Serif CJK TC", "Songti TC",
-                     "STSong", "PMingLiU", "MingLiU", "SimSun", serif !important;
+
+      html,
+      body,
+      body * {
+        font-family: "Noto Serif TC", serif;
       }
 
-      .page {
+      .site {
         width: calc(100% - 30px);
-        padding: 45px 0 55px;
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 0;
       }
 
-      .back {
-        margin-bottom: 45px;
+      .visual {
+        position: static;
+        width: 100%;
+        height: auto;
       }
 
-      h1 {
-        font-size: 34px;
+      .latest-work {
+        margin: 0 0 16px;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.7;
+      }
+
+      .video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+
+      .ad-area {
+        width: 100%;
+        margin-top: 24px;
+      }
+
+      .content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .brand-name {
+        font-size: 38px;
       }
 
       .brand-en {
-        margin-bottom: 42px;
+        font-size: 20px;
       }
 
-      .post-title {
-        font-size: 19px;
+      .slogan {
+        font-size: 17px;
+      }
+
+      nav {
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 15px;
+      }
+
+      footer {
+        margin-top: 45px;
+        font-size: 13px;
       }
     }
   </style>
@@ -152,38 +221,102 @@ layout: none
 
 <body>
 
-  <main class="page">
+  <main class="site">
 
-    <div class="back">
-      <a href="{{ site.baseurl }}/">← 首頁 Home</a>
-    </div>
+    <section class="visual">
 
-    <h1>最新</h1>
+      <h2 class="latest-work">最新作品｜Latest Work</h2>
 
-    <p class="brand-en">Latest</p>
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/xCB4Pt-SxiE"
+          title="最新作品｜Latest Work"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li class="post-item">
+      <!-- AdSense 廣告 -->
+      <div class="ad-area">
+        <ins
+          class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-3625815301042397"
+          data-ad-slot="4652625757"
+          data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
 
-          <p class="post-date">
-            {{ post.date | date: "%d %b, %Y" }}
-          </p>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
 
-          <h2 class="post-title">
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title }}
-            </a>
-          </h2>
+    </section>
 
-        </li>
-      {% endfor %}
-    </ul>
+    <section class="content">
 
-    <footer>
-      Powered by
-      <a href="https://pages.github.com/">GitHub Pages</a>
-    </footer>
+      <h1 class="brand-name">淳映</h1>
+
+      <p class="brand-en">CHUN Films</p>
+
+      <p class="slogan">用不同的媒介詮釋世界。</p>
+
+      <nav aria-label="主要導覽">
+        <a href="/chunfilms/">首頁 Home</a>
+        <a href="/chunfilms/blog/">最新 Latest</a>
+        <a href="/chunfilms/about.html">關於 About</a>
+
+        <a
+          href="https://vimeo.com/user146729676"
+          target="_blank"
+          rel="noopener noreferrer">
+          作品 Vimeo
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@maochun724"
+          target="_blank"
+          rel="noopener noreferrer">
+          抖音 TikTok
+        </a>
+
+        <a
+          href="https://www.youtube.com/@淳映CHUNFilms"
+          target="_blank"
+          rel="noopener noreferrer">
+          頻道 Channel
+        </a>
+
+        <a
+          href="https://maochunweitw.github.io/"
+          target="_blank"
+          rel="noopener noreferrer">
+          淳文字 ChunWenzi
+        </a>
+
+        <a
+          href="https://g0v.social/@imChun"
+          target="_blank"
+          rel="noopener noreferrer">
+          嘟 Mastodon
+        </a>
+
+        <a
+          href="https://www.threads.com/@maochunwei"
+          target="_blank"
+          rel="noopener noreferrer">
+          脆 Threads
+        </a>
+      </nav>
+
+      <footer>
+        Powered by
+        <a href="https://pages.github.com/">GitHub Pages</a>
+      </footer>
+
+    </section>
 
   </main>
 
